@@ -2,6 +2,7 @@ from typing import List
 
 
 class Contract:
+
     def __init__(self, id: int, debt: int) -> None:
         self.id = id
         self.debt = debt
@@ -11,6 +12,7 @@ class Contract:
 
 
 class Contracts:
+
     def get_top_N_open_contracts(
         self,
         open_contracts: List[Contract],
