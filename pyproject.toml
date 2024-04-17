@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 pytest = "^8.1.1"
 taskipy = "^1.12.2"
+pre-commit = "^3.7.0"
 
 [tool.taskipy.tasks]
 install = { cmd = "pip install -r requirements.txt", help = "install packages with pip" }
