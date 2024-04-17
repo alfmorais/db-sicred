@@ -10,6 +10,8 @@ python = "^3.11"
 pytest = "^8.1.1"
 taskipy = "^1.12.2"
 
+[tool.taskipy.tasks]
+test = { cmd = "export PYTHONDONTWRITEBYTECODE=1 && pytest -vvv", help = "runs all unit tests" }
 
 [build-system]
 requires = ["poetry-core"]
