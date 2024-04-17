@@ -1,5 +1,6 @@
-import pytest
 import time
+
+import pytest
 from src.question1 import Contract, Contracts
 
 
@@ -44,7 +45,12 @@ from src.question1 import Contract, Contracts
         ),
     ],
 )
-def test_contract_success(open_contracts, renegotiated_contracts, top_n, response):
+def test_contract_success(
+    open_contracts,
+    renegotiated_contracts,
+    top_n,
+    response,
+):
     contract = Contracts()
 
     start_time = time.time()

@@ -4,7 +4,7 @@
 ## Question 1
 
 Suponha que um banco possui entre suas APIs de uso interno, as seguintes:
-* Um serviço ("Operações em aberto") que gera a cada final de mês, uma lista dos associados e do saldo de suas operações 
+* Um serviço ("Operações em aberto") que gera a cada final de mês, uma lista dos associados e do saldo de suas operações
 financeiras que estão em atraso
 * Outro serviço ("Renegociação") que retorna uma lista com os associados que já renegociaram seus atrasos
 
@@ -14,7 +14,7 @@ A classe <i>Contract</i> possui 2 atributos:
 * <i>debt</i>, o saldo devedor total (de todas as operações) de um correntista
 
 Sua tarefa é implementar um método que retorne os <i>N</i> maiores devedores que ainda não possuem seus débitos renegociados.
- 
+
 O método <i>get_top_N_open_contracts</i> possui a assinatura proposta para esta tarefa. Ele recebe 3 parâmetros,
 na seguinte ordem:
 1. <i>open_contracts</i>: Uma lista em que cada elemento é uma instância de <i>Contract</i>,
@@ -61,7 +61,7 @@ O método <i>combine_orders</i>, da classe <i>Orders</i>, em anexo possui a assi
 * Lembre que cada viagem atende no máximo a 2 requisições.
 * Assuma ainda que nenhum valor dentro de <i>requests</i> será superior a <i>n_max</i>.
 
-Espera-se como retorno apenas um valor inteiro, contendo o número mínimo de viagens que deve ser 
+Espera-se como retorno apenas um valor inteiro, contendo o número mínimo de viagens que deve ser
 feita para atender todas as requisições.
 Não é preciso informar quais requisições serão combinadas, apenas a quantidade mínima de viagens.
 

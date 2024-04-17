@@ -1,8 +1,7 @@
-from typing import List, Generator
+from typing import Generator, List
 
 
 class Orders:
-
     def combine_orders(self, requests: List[int], n_max: int) -> int:
         sorted_requests = sorted(requests, reverse=True)
         how_many = sum(1 for _ in Orders().generate(sorted_requests, n_max))
@@ -17,7 +16,9 @@ class Orders:
                 sorted_requests.pop()
 
             else:
-                second_condition = sorted_requests[0] + sorted_requests[-1] <= n_max
+                second_condition = (
+                    sorted_requests[0] + sorted_requests[-1] <= n_max
+                )  # noqa E501
 
                 if second_condition:
                     yield

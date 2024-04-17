@@ -1,6 +1,8 @@
+import time
+
 import pytest
 from src.question2 import Orders
-import time
+
 
 @pytest.mark.parametrize(
     "requests,n_max,expected_requests",
