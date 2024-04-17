@@ -1,4 +1,5 @@
 import pytest
+import time
 from src.question1 import Contract, Contracts
 
 
@@ -45,10 +46,16 @@ from src.question1 import Contract, Contracts
 )
 def test_contract_success(open_contracts, renegotiated_contracts, top_n, response):
     contract = Contracts()
+
+    start_time = time.time()
     response_open_contracts = contract.get_top_N_open_contracts(
         open_contracts,
         renegotiated_contracts,
         top_n,
     )
+    end_time = time.time()
+
+    excecution_time = end_time - start_time
 
     assert response_open_contracts == response
+    assert excecution_time < 0.1

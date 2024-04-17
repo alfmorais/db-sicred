@@ -1,6 +1,6 @@
 import pytest
 from src.question2 import Orders
-
+import time
 
 @pytest.mark.parametrize(
     "requests,n_max,expected_requests",
@@ -24,6 +24,12 @@ from src.question2 import Orders
 )
 def test_contract_success(requests, n_max, expected_requests):
     orders = Orders()
+
+    start_time = time.time()
     how_many = orders.combine_orders(requests, n_max)
+    end_time = time.time()
+
+    execution_time = end_time - start_time
 
     assert how_many == expected_requests
+    assert execution_time < 0.05
