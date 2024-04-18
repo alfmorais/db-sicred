@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "db-sicred"
+name = "db-sicredi"
 version = "0.1.0"
 description = ""
 authors = ["alfmorais <alfredneto@hotmail.com>"]
