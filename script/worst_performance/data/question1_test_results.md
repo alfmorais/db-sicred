@@ -1,7 +1,7 @@
 # Resultados do Teste - question1.py
 
 ```bash
-(db-sicred-py3.11) ➜  db-sicred git:(develop) ✗ mprof run script/worst_performance/question1.py
+(db-sicredi-py3.11) ➜  db-sicredi git:(develop) ✗ mprof run script/worst_performance/question1.py
 mprof: Sampling memory every 0.1s
 running new process
 running as a Python program...
