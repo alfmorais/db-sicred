@@ -3,11 +3,13 @@ from typing import Generator, List
 
 class Orders:
     def bubble_sort(self, arr: List[int]) -> List[int]:
-        n = len(arr)
-        for i in range(n):
-            for j in range(0, n - i - 1):
-                if arr[j] < arr[j + 1]:
-                    arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        array_size = len(arr)
+
+        for index in range(array_size):
+            for _index in range(0, array_size - index - 1):
+                if arr[_index] < arr[_index + 1]:
+                    arr[_index], arr[_index + 1] = arr[_index + 1], arr[_index]
+        
         return arr
 
     def combine_orders(self, requests: List[int], n_max: int) -> int:
@@ -26,7 +28,7 @@ class Orders:
             else:
                 second_condition = (
                     sorted_requests[0] + sorted_requests[-1] <= n_max
-                )  # noqa E501
+                )
 
                 if second_condition:
                     yield

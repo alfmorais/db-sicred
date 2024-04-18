@@ -12,11 +12,13 @@ class Contract:
 
 class Contracts:
     def bubble_sort_contracts(self, contracts: List[Contract]) -> List[Contract]:
-        n = len(contracts)
-        for i in range(n):
-            for j in range(0, n - i - 1):
-                if contracts[j].debt < contracts[j + 1].debt:
-                    contracts[j], contracts[j + 1] = contracts[j + 1], contracts[j]
+        array_size = len(contracts)
+        
+        for index in range(array_size):
+            for _index in range(0, array_size - index - 1):
+                if contracts[_index].debt < contracts[_index + 1].debt:
+                    contracts[_index], contracts[_index + 1] = contracts[_index + 1], contracts[_index]
+        
         return contracts
 
     def get_top_N_open_contracts(

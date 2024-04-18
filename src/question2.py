@@ -18,7 +18,7 @@ class Orders:
             else:
                 second_condition = (
                     sorted_requests[0] + sorted_requests[-1] <= n_max
-                )  # noqa E501
+                )
 
                 if second_condition:
                     yield
