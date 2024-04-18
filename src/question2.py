@@ -16,9 +16,7 @@ class Orders:
                 sorted_requests.pop()
 
             else:
-                second_condition = (
-                    sorted_requests[0] + sorted_requests[-1] <= n_max
-                )
+                second_condition = sorted_requests[0] + sorted_requests[-1] <= n_max
 
                 if second_condition:
                     yield

@@ -9,7 +9,7 @@ class Orders:
             for _index in range(0, array_size - index - 1):
                 if arr[_index] < arr[_index + 1]:
                     arr[_index], arr[_index + 1] = arr[_index + 1], arr[_index]
-        
+
         return arr
 
     def combine_orders(self, requests: List[int], n_max: int) -> int:
@@ -26,9 +26,7 @@ class Orders:
                 sorted_requests.pop()
 
             else:
-                second_condition = (
-                    sorted_requests[0] + sorted_requests[-1] <= n_max
-                )
+                second_condition = sorted_requests[0] + sorted_requests[-1] <= n_max
 
                 if second_condition:
                     yield
